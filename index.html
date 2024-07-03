@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Handle Excel</title>
+        <script type="text/javascript"
+            src="assets/js/xlsx.full.min.js"></script>
+        <script
+            src="assets/js/jquery.min.js"
+            integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script
+            src='assets/js/jquery-ui.min.js'></script>
+        <link rel="stylesheet" href="assets/css/style.css">
+    </head>
+    <body>
+        <svg class="spinner" width="65px" height="65px" viewBox="0 0 66 66"
+            xmlns="http://www.w3.org/2000/svg">
+            <circle class="path" fill="none" stroke-width="6"
+                stroke-linecap="round" cx="33" cy="33" r="30"></circle>
+        </svg>
+        <!-- multistep form -->
+        <div id="msform">
+            <!-- progressbar -->
+            <ul id="progressbar">
+                <li class="active">Upload file</li>
+                <li>Download file</li>
+                <li>Submit file</li>
+            </ul>
+            <!-- fieldsets -->
+            <fieldset>
+                <input type="file" id="file" name="files[]" multiple="multiple"
+                    accept=".xlsx, .xls, .ods" />
+                <h2 class="fs-title">Upload file</h2>
+                <h3 class="fs-subtitle">Choose and upload your excel
+                    file(s)</h3>
+                <input type="button" class="action-button" value="Upload"
+                    id="upload">
+                <input type="button" name="next" class="next action-button"
+                    value="Next" />
+            </fieldset>
+            <fieldset>
+                <h2 class="fs-title">Download file</h2>
+                <input type="text" name="exportedFile_name"
+                    id="exportedFile_name" placeholder="New file name">
+                <p id="error_message"></p>
+                <input type="button" name="previous"
+                    class="previous action-button" value="Previous" />
+                <input type="button" name="next"
+                    class="next download action-button"
+                    value="Download" />
+            </fieldset>
+            <fieldset>
+                <h2 class="fs-title">Submit file</h2>
+                <h3 class="fs-subtitle">Your file(s) are handled and can be
+                    summit to system</h3>
+                <input type="button" name="previous"
+                    class="previous action-button" value="Previous" />
+                <a href="#"
+                    class="submit action-button" target="_top">Submit</a>
+            </fieldset>
+        </div>
+    </body>
+    <script type="text/javascript" src="assets/js/index.js"></script>
+</html>
